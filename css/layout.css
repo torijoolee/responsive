@@ -160,6 +160,7 @@ h1.logo img {
   margin: 0 auto;
   font-size: 1.4rem;
   border-bottom: 1px solid transparent;
+  transition: all 0.5s;
 }
 .gnb-menu.Active {
   border-bottom: 1px solid var(--color-middk-gray);
@@ -177,7 +178,6 @@ h1.logo img {
   top: -100%;
   opacity: 1;
   transition: all 0.5s;
-  background: gray;
 }
 .sub-menu.On {
   top: 110px;
@@ -190,12 +190,12 @@ h1.logo img {
   align-items: center;
   justify-content: center;
   opacity: 0;
+  transition: all 0.5s;
+}
+.sub-menu li.nav-sub-box.Over {
+  opacity: 1;
 }
 .nav-sub-a {
   font-size: 13px;
   padding: 0 20px;
-}
-
-.sub-menu li.nav-sub-box.Over {
-  opacity: 1;
 }
