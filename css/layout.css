@@ -7,7 +7,7 @@
   --color-mid-gray: #ccc;
   --color-middk-gray: #aaa;
 }
-
+/* header */
 .header {
   position: relative;
   background-color: #fff;
@@ -21,7 +21,6 @@
   display: flex;
   justify-content: space-between;
   padding: 0 7%;
-  border: 1px solid red;
 }
 .select-language {
   position: relative;
@@ -144,4 +143,59 @@ h1.logo img {
   position: absolute;
   top: -3px;
   right: -60px;
+}
+/* gnb */
+.gnb {
+  height: 30px;
+}
+.gnb .header-wrap {
+  height: 100%;
+}
+.gnb-menu {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  border-bottom: 1px solid transparent;
+}
+.gnb-menu.Active {
+  border-bottom: 1px solid var(--color-middk-gray);
+}
+.nav-menu-a {
+  display: block;
+  padding: 5px 20px 10px;
+}
+.sub-menu {
+  position: absolute;
+  height: 35px;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+  top: -100%;
+  opacity: 1;
+  transition: all 0.5s;
+  background: gray;
+}
+.sub-menu.On {
+  top: 110px;
+}
+.sub-menu li.nav-sub-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.nav-sub-a {
+  font-size: 13px;
+  padding: 0 20px;
+}
+
+.sub-menu li.nav-sub-box.Over {
+  opacity: 1;
 }
