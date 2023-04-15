@@ -1,6 +1,7 @@
 (() => {
   const visualSlide = document.querySelectorAll(".visual-slide");
   const btnElems = document.querySelectorAll(".visual-btm-list");
+  const side = document.querySelectorAll(".visual-side");
   const prevBtn = document.querySelector(".left");
   const nextBtn = document.querySelector(".right");
   const startBtn = document.querySelector(".start");
@@ -11,6 +12,7 @@
   for (let i = 0; i < totalPage; i++) {
     visualSlide[i].dataset.index = i;
     btnElems[i].dataset.index = i;
+    side[i].dataset.index = i;
   }
 
   visualSlide[current].classList.add("On");
@@ -22,6 +24,7 @@
       current = 0;
     }
     barActive();
+    imgActive();
   }
   function prevEvent() {
     if (current > 0) {
@@ -30,9 +33,19 @@
       current = totalPage - 1;
     }
     barActive();
+    imgActive();
   }
+
   //imgActive
-  function imgActive() {}
+  function imgActive() {
+    visualSlide.forEach((img) => {
+      if (current == img.dataset.index) {
+        visualSlide[current].classList.add("On");
+      } else {
+        img.classList.remove("On");
+      }
+    });
+  }
   //barActive
   function barActive() {
     btnElems.forEach((btn) => {

@@ -222,10 +222,11 @@ h1.logo img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
-  display: none;
+  opacity: 0;
+  transition: all 1s;
 }
 .visual-slide.On {
-  display: block;
+  opacity: 1;
 }
 .visual-slide:nth-child(01) {
   background-image: url(/img/visu_pc_01.jpg);
@@ -241,13 +242,16 @@ h1.logo img {
   position: absolute;
   top: 0;
   right: 0;
-  /* width: 44%; */
   width: 0;
+  opacity: 0;
   height: 100%;
+  transition: all 1s;
 }
-.visual-side.On {
+.visual-slide.On .visual-side {
   width: 44%;
+  opacity: 1;
 }
+
 .visual-slide:nth-child(1) .visual-side {
   background-color: rgba(237, 185, 46, 0.3);
 }
@@ -261,8 +265,11 @@ h1.logo img {
   position: absolute;
   top: 0;
   right: 0;
-  width: 44%;
+  width: 0;
   height: 100%;
+}
+.visual-slide.On .visual-side + .visual-txt-wrap {
+  width: 44%;
 }
 .visual-txt-cont {
   width: 415px;
@@ -335,6 +342,7 @@ h1.logo img {
   display: block;
   border-radius: 5px;
   text-indent: -99999px;
+  transition: all 0.5s;
 }
 .visual-btm-wrap .visual-btm-list.Active a {
   width: 25px;
