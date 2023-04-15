@@ -1,6 +1,7 @@
 (() => {
   const visualSlide = document.querySelectorAll(".visual-slide");
   const btnElems = document.querySelectorAll(".visual-btm-list");
+  const btnLink = document.querySelectorAll(".visual-btm-list a");
   const side = document.querySelectorAll(".visual-side");
   const prevBtn = document.querySelector(".left");
   const nextBtn = document.querySelector(".right");
@@ -13,6 +14,7 @@
     visualSlide[i].dataset.index = i;
     btnElems[i].dataset.index = i;
     side[i].dataset.index = i;
+    btnLink[i].dataset.index = i;
   }
 
   visualSlide[current].classList.add("On");
@@ -75,6 +77,27 @@
     startBtn.style.display = "none";
     stopBtn.style.display = "block";
   }
+  //click btn
+  function moveToSlide(event) {
+    stopAutoPlay();
+    btnElems.forEach((elem) => {
+      elem.classList.remove("Active");
+    });
+    event.target.parentNode.classList.add("Active");
+    const idx = event.target.dataset.index;
+    if (idx == null) return;
+    visualSlide.forEach((elem) => {
+      if (elem.dataset.index == idx) {
+        elem.classList.add("On");
+      } else {
+        elem.classList.remove("On");
+      }
+    });
+  }
+
+  btnLink.forEach((btn) => {
+    btn.addEventListener("click", moveToSlide);
+  });
 
   nextBtn.addEventListener("click", nextEvent);
   prevBtn.addEventListener("click", prevEvent);
