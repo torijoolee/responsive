@@ -61,7 +61,7 @@
   }
   let interval = setInterval(function () {
     autoPlay();
-  }, 4000);
+  }, 5000);
 
   //stop Play
   function stopAutoPlay() {
@@ -71,7 +71,7 @@
   }
   //start Again
   function intervalAgain() {
-    interval = setInterval(autoPlay, 4000);
+    interval = setInterval(autoPlay, 5000);
     startBtn.style.display = "none";
     stopBtn.style.display = "block";
   }

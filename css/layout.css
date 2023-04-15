@@ -246,6 +246,7 @@ h1.logo img {
   opacity: 0;
   height: 100%;
   transition: all 1s ease-out;
+  transition-delay: 0.3s;
 }
 .visual-slide.On .visual-side {
   width: 44%;
@@ -268,7 +269,8 @@ h1.logo img {
   width: 44%;
   height: 100%;
   opacity: 0;
-  transition: all 3s;
+  transition: all 2s;
+  transition-delay: 1s;
 }
 .visual-slide.On .visual-side + .visual-txt-wrap {
   opacity: 1;
