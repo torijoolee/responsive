@@ -59,9 +59,25 @@
   function autoPlay() {
     nextEvent();
   }
-  setInterval(function () {
+  let interval = setInterval(function () {
     autoPlay();
-  }, 3000);
+  }, 4000);
+
+  //stop Play
+  function stopAutoPlay() {
+    clearInterval(interval);
+    stopBtn.style.display = "none";
+    startBtn.style.display = "block";
+  }
+  //start Again
+  function intervalAgain() {
+    interval = setInterval(autoPlay, 4000);
+    startBtn.style.display = "none";
+    stopBtn.style.display = "block";
+  }
+
   nextBtn.addEventListener("click", nextEvent);
   prevBtn.addEventListener("click", prevEvent);
+  stopBtn.addEventListener("click", stopAutoPlay);
+  startBtn.addEventListener("click", intervalAgain);
 })();
