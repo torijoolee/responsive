@@ -56,6 +56,12 @@
       }
     });
   }
+  function autoPlay() {
+    nextEvent();
+  }
+  setInterval(function () {
+    autoPlay();
+  }, 3000);
   nextBtn.addEventListener("click", nextEvent);
   prevBtn.addEventListener("click", prevEvent);
 })();
