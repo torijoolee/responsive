@@ -199,3 +199,52 @@ h1.logo img {
   font-size: 13px;
   padding: 0 20px;
 }
+/* visual */
+.visual {
+  max-width: 1920px;
+  margin: auto;
+  position: relative;
+  z-index: 0;
+}
+.visual-wrap {
+  position: relative;
+  background-color: gray;
+  height: 550px;
+}
+.visual-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+.visual-slide:nth-child(01) {
+  background-image: url(/img/visu_pc_01.jpg);
+}
+.visual-slide:nth-child(02) {
+  background-image: url(/img/visu_pc_02.jpg);
+}
+.visual-slide:nth-child(03) {
+  background-image: url(/img/visu_pc_03.jpg);
+}
+
+.visual-side {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44%;
+  height: 100%;
+}
+.visual-slide:nth-child(1) .visual-side {
+  background-color: rgba(237, 185, 46, 0.3);
+}
+.visual-slide:nth-child(2) .visual-side {
+  background-color: rgba(164, 105, 53, 0.5);
+}
+.visual-slide:nth-child(3) .visual-side {
+  background-color: rgba(140, 171, 217, 0.5);
+}

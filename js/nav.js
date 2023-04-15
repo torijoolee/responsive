@@ -27,13 +27,13 @@
   const subMenu = document.querySelector(".sub-menu");
   const subBoxes = document.querySelectorAll(".nav-sub-box");
   function handleMenu(event) {
-    gnbMenu.classList.add("Active");
-    subMenu.classList.add("On");
     for (let i = 0; i < gnbMenuItem.length; i++) {
       gnbMenuItem[i].dataset.index = i;
       subBoxes[i].dataset.index = i;
-      console.log(event.target.dataset.index);
       const target = event.target.dataset.index;
+      console.log(target);
+      gnbMenu.classList.add("Active");
+      subMenu.classList.add("On");
       if (target == subBoxes[i].dataset.index) {
         subBoxes[i].classList.add("Over");
       } else {
@@ -42,5 +42,14 @@
     }
   }
 
-  gnbMenu.addEventListener("click", handleMenu);
+  function removeFunction() {
+    gnbMenu.classList.remove("Active");
+    subMenu.classList.remove("On");
+  }
+  gnbMenu.addEventListener("mouseover", handleMenu);
+  subBoxes.forEach((box) => {
+    box.addEventListener("mouseleave", function () {
+      setTimeout(removeFunction, 650);
+    });
+  });
 })();
