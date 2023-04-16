@@ -163,4 +163,45 @@
     background-color: #767676;
     top: 5px;
   }
+  /* nav */
+  .mob-nav {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 265px;
+    background-color: #363636;
+    height: 100%;
+    transition: all 0.5s;
+  }
+  .mob-nav .bg {
+    position: fixed;
+    top: 0;
+    left: 265px;
+    width: calc(100% - 265px);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.308);
+  }
+  .sidenav-h {
+    text-align: center;
+    padding: 13px 0 12px;
+  }
+  .sidenav-h img {
+    width: 100px;
+  }
+  .m-nav-list {
+    border-top: 1px solid #494949;
+  }
+  .m-nav-list li > a {
+    display: block;
+    position: relative;
+    font-size: 15px;
+    padding: 12px 0 12px 15px;
+    border-bottom: 1px solid #494949;
+    color: #d5d5d5;
+    font-weight: bold;
+  }
+  .m-nav-list li > a.m-nav-list-tit.On {
+    background-color: #1d1d1d;
+  }
 }
