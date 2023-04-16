@@ -455,3 +455,46 @@ h2.cont-title {
   line-height: 36px;
   text-align: center;
 }
+.lounge {
+  margin-top: 70px;
+  padding: 0 90px;
+  height: 590px;
+}
+.lounge-cont {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.lounge-txt-wrap {
+  width: calc(100% - 650px);
+}
+.lounge-txt-wrap h3 {
+  border-bottom: 1px solid #c3bdb6;
+  color: #6a481b;
+  font-size: 1.85vw;
+}
+.lounge-txt-wrap .sub-tit {
+  margin: 40px 0 0;
+  color: var(--color-black);
+  font-size: 46px;
+  line-height: 65px;
+}
+.lounge-txt-wrap .desc-txt {
+  margin: 16px 0 54px;
+  color: #333;
+  font-size: 20px;
+  line-height: 32px;
+}
+.lounge-txt-wrap .btn-view {
+  display: inline-block;
+  height: 38px;
+  font-size: 15px;
+  border: 1px solid var(--color-lig-black);
+  padding: 0 44px;
+  line-height: 36px;
+  color: #555;
+}
+.lounge.lou02 .lounge-img {
+  order: 2;
+}
