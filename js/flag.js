@@ -3,6 +3,7 @@
   const nextBtn = document.querySelector(".flag-side.right");
   const imgSlider = document.querySelectorAll(".flag-slider li");
   const flagBtn = document.querySelectorAll(".flag-btn-wrap li");
+  const flagBtnLink = document.querySelectorAll(".flag-btn-wrap li a");
 
   let current = 0;
   const totalPage = imgSlider.length;
@@ -13,6 +14,7 @@
   for (let i = 0; i < totalPage; i++) {
     imgSlider[i].dataset.index = i;
     flagBtn[i].dataset.index = i;
+    flagBtnLink[i].dataset.index = i;
   }
 
   //prev Btn
@@ -64,6 +66,31 @@
     });
   }
   //when clicked flagBtn
+  function moveToPage(event) {
+    event.preventDefault();
+    console.log(event.target.dataset.index);
+    let target = event.target.dataset.index;
+    flagBtn.forEach((link) => {
+      if (target == link.dataset.index) {
+        link.classList.add("Act");
+      } else {
+        link.classList.remove("Act");
+      }
+    });
+    imgSlider.forEach((img) => {
+      if (target == img.dataset.index) {
+        img.classList.add("On");
+      } else {
+        img.classList.remove("On");
+      }
+    });
+  }
+
+  //이벤트 들어가는 함수의 setInterval 어떻게 ?
+
+  flagBtnLink.forEach((btn) => {
+    btn.addEventListener("click", moveToPage);
+  });
 
   prevBtn.addEventListener("click", prevPageHandle);
   nextBtn.addEventListener("click", nextPageHandle);
