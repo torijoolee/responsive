@@ -455,6 +455,7 @@ h2.cont-title {
   line-height: 36px;
   text-align: center;
 }
+/* lounge */
 .lounge {
   margin-top: 70px;
   padding: 0 90px;
@@ -497,4 +498,30 @@ h2.cont-title {
 }
 .lounge.lou02 .lounge-img {
   order: 2;
+}
+/* flagship */
+.flag-ship {
+  margin: 120px 0 112px;
+}
+.flag-wrap {
+  height: 400px;
+  position: relative;
+}
+.flag-slider {
+  width: 100%;
+  z-index: 0;
+  position: relative;
+}
+.flag-slider li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  text-indent: -9999px;
+}
+.flag-slider li.fl-01 {
+  background-image: url(img/flag-bg-px-01.jpg);
 }
