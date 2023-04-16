@@ -301,6 +301,16 @@ h1.logo img {
 .visual-btn-wrap {
   margin: 30px 0 0;
 }
+
+.flag-wrap .btn-view {
+  display: inline-block;
+  width: 132px;
+  height: 38px;
+  border: 1px solid var(--color-lig-black);
+  font-size: 15px;
+  line-height: 35px;
+  text-align: center;
+}
 .visual-btn-wrap .btn-view {
   display: inline-block;
   width: 132px;
@@ -405,17 +415,21 @@ h2.cont-title {
 .recomm-list-wrap {
   height: 434px;
 }
+
 .recomm-list {
   display: none;
 }
 .recomm-list.Act {
   display: flex;
 }
-/* 질문 */
+
 .recomm-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 25%;
   position: relative;
-  padding: 34px 35px 0;
 }
 .recomm-img img {
   width: 290px;
@@ -521,6 +535,7 @@ h2.cont-title {
   height: 100%;
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: cover;
   text-indent: -9999px;
   opacity: 0;
   transition: all 0.5s;
