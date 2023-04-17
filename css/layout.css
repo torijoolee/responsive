@@ -8,6 +8,9 @@
   --color-middk-gray: #aaa;
   --color-light-gray: #e6e6e6;
 }
+#main {
+  filter: blur(0);
+}
 /* header */
 .header {
   position: relative;

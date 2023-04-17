@@ -4,6 +4,10 @@
   const bg = document.querySelector(".mob-nav .bg");
   const menuTitle = document.querySelectorAll(".m-nav-list-tit");
   const innerMenu = document.querySelectorAll(".m-nav-list li dl");
+  const icon = document.querySelectorAll(".icon-nav");
+  const searchIcon = document.querySelector(".h-open-search");
+  const main = document.querySelector("#main");
+  const searchCon = document.querySelector(".search-container");
 
   for (let i = 0; i < menuTitle.length; i++) {
     menuTitle[i].dataset.index = i;
@@ -18,21 +22,15 @@
   }
 
   function handleMenuItem(event) {
-    console.log(event.target.dataset.index);
-    const target = event.target.dataset.index;
-    event.target.classList.toggle("On");
-    if (event.target.classList.contains("On")) {
-      innerMenu.forEach((elem) => {
-        if (target == elem.dataset.index) {
-          elem.style.height = 300 + "px";
-        } else {
-          elem.style.height = 0 + "px";
-        }
-      });
-    } else {
-      innerMenu.forEach((elem) => {
-        elem.style.height = 0 + "px";
-      });
+    for (let i = 0; i < menuTitle.length; i++) {
+      menuTitle[i].classList.remove("On");
+      innerMenu[i].style.display = "none";
+      if (event.target.classList.contains("On")) {
+        event.target.nextElementSibling.style.display = "block";
+        console.log(event.target.nextElementSibling);
+      } else {
+        event.target.classList.add("On");
+      }
     }
   }
 
@@ -41,4 +39,13 @@
   });
   mobNavBtn.addEventListener("click", handleMobileNav);
   bg.addEventListener("click", closeNav);
+  function blurMode() {
+    main.classList.add("On");
+  }
+  function removeSearchMode() {
+    main.classList.remove("On");
+    searchCon.classList.remove("show");
+  }
+  searchIcon.addEventListener("click", blurMode);
+  main.addEventListener("click", removeSearchMode);
 })();
