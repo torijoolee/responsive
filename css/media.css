@@ -319,4 +319,36 @@
     top: 6px;
     right: 10px;
   }
+  .visual-txt-cont {
+    width: 28.8194vw;
+  }
+  .visual-tit {
+    font-size: 2.9167vw;
+  }
+  .visual-txt-01 {
+    font-size: 1.25vw;
+  }
+  .visual-txt-02 {
+    margin: 3.125vw 0 0;
+    font-size: 1.3889vw;
+  }
+  .visual-btn-wrap {
+    margin: 2.0833vw 0 0;
+  }
+  .visual-tit {
+    line-height: 3.75vw;
+  }
+  .visual-btn-wrap .btn-view {
+    width: 9.1667vw;
+    height: 2.6389vw;
+    font-size: 1.0417vw;
+    line-height: 2.4306vw;
+  }
+  .visual-btm-wrap li {
+    padding: 0 0.3472vw;
+  }
+  .visual-btm-wrap .controls-wrap .control {
+    width: 0.6944vw;
+    height: 0.6944vw;
+  }
 }
