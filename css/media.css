@@ -410,3 +410,131 @@
     top: 25%;
   }
 }
+@media screen and (max-width: 767px) {
+  .mov-nav-btn {
+    top: 25px;
+  }
+  .header-link > a.h-open-search {
+    right: 12px;
+  }
+  .h-open-search .icon-search {
+    right: 0px;
+  }
+
+  .visual-wrap {
+    height: 135vw;
+  }
+  .visual-slide:nth-child(01) {
+    background-image: url(../img/visu_mo_01.jpg);
+  }
+  .visual-slide:nth-child(02) {
+    background-image: url(../img/visu_mo_02.jpg);
+  }
+  .visual-slide:nth-child(03) {
+    background-image: url(../img/visu_mo_03.jpg);
+  }
+  .visual-side {
+    visibility: hidden;
+  }
+  .visual-txt-wrap {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 28.125vw;
+  }
+  .visual-txt-cont {
+    width: 100%;
+    align-items: center;
+  }
+
+  .visual-txt-02 {
+    display: none;
+  }
+  .visual-btn-wrap {
+    display: none;
+  }
+  .visual-slide:nth-child(3) .visual-txt-wrap {
+    background-color: rgba(140, 171, 217, 0.5);
+  }
+  .visual-slide:nth-child(2) .visual-txt-wrap {
+    background: rgba(164, 105, 53, 0.5);
+  }
+  .visual-slide:nth-child(1) .visual-txt-wrap {
+    background: rgba(237, 185, 46, 0.3);
+  }
+  .visual-tit {
+    font-size: 6.25vw;
+    line-height: 7.188vw;
+    letter-spacing: 0.1em;
+  }
+  .visual-txt-01 {
+    margin-top: 1.25vw;
+    font-size: 3.438vw;
+    letter-spacing: 0.01em;
+  }
+  .visual-btm-wrap .visual-btm-list a {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--color-mid-gray);
+  }
+  .visual-btm-wrap .visual-btm-list.Active a {
+    width: 4vw;
+  }
+  .visual-btm-wrap .controls-wrap .control {
+    height: 10px;
+  }
+  .visual-btm-wrap {
+    bottom: -8vw;
+  }
+  .visual-btm-wrap .controls-wrap .stop {
+    background-image: url(/img/btn-stop-mo.png);
+  }
+  .visual-btm-wrap .controls-wrap .start {
+    background-image: url(/img/btn-play-mo.png);
+  }
+  .visual-arrow {
+    width: 12px;
+    height: 12px;
+    top: auto;
+    bottom: -8vw;
+  }
+  .recommend {
+    margin-top: 21.875vw;
+  }
+  h2.cont-title {
+    font-size: 5vw;
+  }
+  .recomm-tab {
+    width: auto;
+    margin: 0 4.688vw;
+  }
+  .recomm-tab .btn-tab {
+    font-size: 14px;
+    line-height: 10vw;
+  }
+  .recomm-list.Act {
+    flex-wrap: wrap;
+    margin-top: 4.688vw;
+  }
+  .recomm-list li {
+    width: 50%;
+    height: 68.438vw;
+    padding: 0 1.25vw;
+    cursor: pointer;
+  }
+  .recomm-list li:hover .buy-view-layer {
+    display: none;
+  }
+  .recomm-img {
+    border: 1px solid var(--color-gray);
+    height: 50vw;
+  }
+  .recomm-name {
+    padding: 1.875vw 0;
+    font-size: 3.75vw;
+  }
+  .buy-view-layer {
+    display: none;
+  }
+}
