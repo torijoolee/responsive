@@ -22,34 +22,44 @@
   closeCon.addEventListener("click", closeContainer);
 
   // sub-menu
-  const gnbMenu = document.querySelector(".gnb-menu");
-  const gnbMenuItem = document.querySelectorAll(".nav-menu-a");
-  const subMenu = document.querySelector(".sub-menu");
-  const subBoxes = document.querySelectorAll(".nav-sub-box");
+  const gnbMenu = document.querySelector(".gnb");
+  const navMenu = document.querySelectorAll(".list");
+  const noMenu = document.querySelector(".nav-menu-a");
+  //대메뉴 이름
+  const gnbMenuItem = document.querySelectorAll(".inner-wrap");
+  // 서브메뉴 묶음
+
+  for (let i = 0; i < navMenu.length; i++) {
+    navMenu[i].dataset.index = i;
+    gnbMenuItem[i].dataset.index = i;
+  }
+
   function handleMenu(event) {
-    for (let i = 0; i < gnbMenuItem.length; i++) {
-      gnbMenuItem[i].dataset.index = i;
-      subBoxes[i].dataset.index = i;
-      const target = event.target.dataset.index;
-      console.log(target);
+    let target = event.target.dataset.index;
+    let sibling = event.target.nextElementSibling;
+    console.log(target);
+    removeFunction();
+    if (target == undefined) return;
+    if (target == sibling.dataset.index) {
+      sibling.classList.add("Over");
       gnbMenu.classList.add("Active");
-      subMenu.classList.add("On");
-      if (target == subBoxes[i].dataset.index) {
-        subBoxes[i].classList.add("Over");
-      } else {
-        subBoxes[i].classList.remove("Over");
-      }
+    } else {
+      sibling.classList.remove("Over");
+      gnbMenu.classList.remove("Active");
     }
   }
 
   function removeFunction() {
     gnbMenu.classList.remove("Active");
-    subMenu.classList.remove("On");
-  }
-  gnbMenu.addEventListener("mouseover", handleMenu);
-  subBoxes.forEach((box) => {
-    box.addEventListener("mouseleave", function () {
-      setTimeout(removeFunction, 650);
+    gnbMenuItem.forEach((elem) => {
+      elem.classList.remove("Over");
     });
+  }
+  noMenu.addEventListener("mouseover", removeFunction);
+  navMenu.forEach((menu) => {
+    menu.addEventListener("mouseover", handleMenu);
+  });
+  gnbMenuItem.forEach((item) => {
+    item.addEventListener("mouseleave", removeFunction);
   });
 })();

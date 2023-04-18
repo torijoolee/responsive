@@ -2,7 +2,9 @@
   const mobNavBtn = document.querySelector(".mov-nav-btn");
   const mobNav = document.querySelector(".mob-nav");
   const bg = document.querySelector(".mob-nav .bg");
+  // 메뉴타이틀
   const menuTitle = document.querySelectorAll(".m-nav-list-tit");
+  //타이틀 안에 있는 리스트
   const innerMenu = document.querySelectorAll(".m-nav-list li dl");
   const icon = document.querySelectorAll(".icon-nav");
   const searchIcon = document.querySelector(".h-open-search");
@@ -14,13 +16,15 @@
     innerMenu[i].dataset.index = i;
   }
 
+  //nav open
   function handleMobileNav() {
     mobNav.classList.add("show");
   }
+  //nav close
   function closeNav() {
     mobNav.classList.remove("show");
   }
-
+  //accordion
   function handleMenuItem(event) {
     for (let i = 0; i < menuTitle.length; i++) {
       menuTitle[i].classList.remove("On");
