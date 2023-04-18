@@ -565,7 +565,7 @@
   .lounge-txt-wrap h3 {
     position: absolute;
     top: -40px;
-    width: 100%;
+    /* width: 100%; */
     font-size: 4.375vw;
   }
   .lounge-txt-wrap .sub-tit {
@@ -586,5 +586,70 @@
   }
   .lou02 {
     margin-top: 25vw;
+  }
+  /* flag */
+  .flag-wrap {
+    height: auto;
+    padding: 0 8.75vw 10.3125vw;
+    background-image: url(/img/flag-bg-txt-mo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 100%;
+  }
+  .flag-slider {
+    height: 82.5vw;
+  }
+  .flag-slider li.fl-01 {
+    background-image: url(/img/flag-bg-mo-01.jpg);
+  }
+  .flag-slider li.fl-02 {
+    background-image: url(/img/flag-bg-mo-02.jpg);
+  }
+  .flag-slider li.fl-03 {
+    background-image: url(/img/flag-bg-mo-03.jpg);
+  }
+  .flag-slider li.fl-04 {
+    background-image: url(/img/flag-bg-mo-04.jpg);
+  }
+  .flag-txt-wrap {
+    position: static;
+    width: 100%;
+  }
+  .flag-txt-wrap p {
+    font-size: 3.75vw;
+    line-height: 6.5625vw;
+    margin: 6.25vw 0;
+  }
+  .flag-txt-wrap .btn-view {
+    height: 9.0625vw;
+    padding: 0 9.375vw;
+    font-size: 3.125vw;
+    line-height: 8vw;
+    margin-top: 0;
+    width: auto;
+  }
+  .flag-btn-wrap li a {
+    width: 3vw;
+    height: 3vw;
+    background-color: var(--color-gray);
+    margin: 0 0.5vw;
+  }
+  .flag-btn-wrap {
+    position: absolute;
+    margin: 0;
+    top: 74.375vw;
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+  .flag-side {
+    background-position: center top;
+    top: 73vw;
+  }
+  .flag-side.left {
+    left: 10vw;
+  }
+  .flag-side.right {
+    right: 10vw;
   }
 }
