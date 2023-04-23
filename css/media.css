@@ -262,9 +262,13 @@
     transform: rotate(0deg);
   }
   .m-nav-list li > dl {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
   }
-
+  /* .m-nav-list li > a.m-nav-list-tit.On .m-nav-list li > dl {
+    height: 1000px;
+  } */
   .m-nav-list li > dl > dd {
     border-bottom: 1px solid #414141;
     line-height: 1.6;
